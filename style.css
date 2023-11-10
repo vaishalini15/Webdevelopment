@@ -3,16 +3,53 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Poppins',sans-serif;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
 }
 
 body{
     line-height: 1.6;
 }
 
+
+nav{
+    font-size: 17px;
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    margin-bottom: 20px;
+}
+
+nav li{
+    
+    margin: 0 8px;
+    justify-content: space-around;
+    display: inline-block;
+}
+nav a{
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: wheat;
+}
+
+.menu-line{
+    height: 5px;
+    width: 20px;
+    background-color: #333;
+    margin-bottom: 3px;
+    border-radius: 2px;
+} 
+
+.menu{
+    cursor:pointer;
+    display: none;
+}
+
 h1{
-    font-size: 36px;
+    font-size: 38px;
     font-weight: bold;
     text-align: center;
     margin: 40px 0 60px 0;
@@ -26,26 +63,27 @@ form{
 }
 
 #search-input{
-    width: 60;
+    width: 100;
     max-width: 400px;
     padding: 10px 20px;
     border: none;
     box-shadow: 0 0 6px rgb(0, 0, 0.2);
-    border-radius: 5px;
+    border-radius: 30px;
     font-size: 18px;
     color:black;
 }
 
 #search-button{
     padding: 10px 20px;
-    background-color:aqua;
+    background-color:#333;
     color: #fff;
     border: none;
     font-size: 18px;
     box-shadow: 0 0 6px rgb(0, 0, 0.2);
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 25px;
     margin-left: 10px;
+    margin-bottom: 20px; 
 }
 
 .search-images{
@@ -99,6 +137,36 @@ form{
     border-radius: 5px;
     margin: 30px auto;
     display:none; /*not initial page this button is required but whent he user searches more images it should be visible possibly from the next page*/
+} 
+
+
+/* for navigation bar in mobile */
+@media all and (max-width:640px){
+    nav{
+        flex-direction: column;
+    }
+
+    nav li{
+        display: block;
+        padding:10px 0;
+    }
+
+    ul {text-align: center;
+    display: none;}
+
+    .logo{
+        align-self: flex-start;
+        margin: 10px 0px 0px 30px;
+    }
+    .menu{
+        display: block;
+        position: absolute;
+        right:20px;
+        top:25px;
+    }
+    .showMenu{
+        display: block;
+    }
 }
 
 /*for the change in screen size*/

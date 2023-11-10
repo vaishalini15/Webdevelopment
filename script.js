@@ -57,3 +57,11 @@ formEl.addEventListener("submit",(event) => {
 showMore.addEventListener("click",() => {
     searchImages();
 });
+
+// for navigation bar in mobile
+
+const menu = document.querySelector('.menu')
+const menuList = document.querySelector('nav ul')
+menu.addEventListener('click', ()=>{
+    menuList.classList.toggle('showMenu')
+})
